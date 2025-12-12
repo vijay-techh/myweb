@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> VRM Rise</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #0d0d0d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Times New Roman', Times, serif;
+      color: white;
+    }
+
+    /* Title small text */
+    .title {
+      position: absolute;
+      top: 20px;
+      font-size: 20px;
+      opacity: 0.9;
+      letter-spacing: 1px;
+    }
+
+    /* VRM text rising animation */
+    .vrm-text {
+      font-size: 120px;
+      font-weight: 900;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #ffffff, #d5faff);
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+      text-shadow:
+        0 0 20px rgba(255, 255, 255, 0.2),
+        0 0 40px rgba(0, 200, 255, 0.2);
+      animation: rise 2s ;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(200%);
+        opacity: 0;
+        filter: blur(8px);
+      }
+      50% {
+        transform: translateY(0%);
+        opacity: 1;
+        filter: blur(0px);
+      }
+      100% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="vrm-text">VRM</div>
+
+</body>
+</html>
