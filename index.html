@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VRM Group</title>
+
+  <!-- ✅ PAGE TITLE (Google blue link) -->
+  <title>VRM Group | Software Solutions & Digital Innovation</title>
+
+  <!-- ✅ META DESCRIPTION (Google snippet text) -->
+  <meta
+    name="description"
+    content="VRM Group is a unified group of companies delivering software solutions, digital innovation, consulting, media, and next-generation learning."
+  />
+
+  <!-- ✅ SITE NAME FOR GOOGLE -->
+  <meta name="application-name" content="VRM Group" />
+
+  <!-- ✅ CANONICAL URL (VERY IMPORTANT) -->
+  <link rel="canonical" href="https://vrmgroup.co.in/" />
+
+  <!-- ✅ OPEN GRAPH (for Google + social previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="VRM Group | Software Solutions & Digital Innovation" />
+  <meta
+    property="og:description"
+    content="A unified group of companies shaping the future through software, digital innovation, consulting, media, and learning."
+  />
+  <meta property="og:url" content="https://vrmgroup.co.in/" />
+
+  <!-- ✅ STRUCTURED DATA (This makes Google show site name properly) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "VRM Group",
+    "url": "https://vrmgroup.co.in",
+    "description": "VRM Group provides software solutions, digital innovation, consulting, media, and learning platforms."
+  }
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "VRM Group",
+  "url": "https://vrmgroup.co.in",
+  "logo": "https://vrmgroup.co.in/favicon.png",
+  "sameAs": [],
+  "description": "VRM Group is a unified group of companies delivering software solutions, digital innovation, consulting, media, and learning."
+}
+</script>
+<link rel="icon" style="border-radius: 25px;" href="favicon.png" type="image.png" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      overflow-x: hidden;
+    }
+
+    /* ========================== */
+    /* VRM TEXT INTRO ANIMATION  */
+    /* ========================== */
+    .vrm-text {
+      width: 100%;
+      text-align: center;
+      margin-top: 140px;
+      font-size: 120px;
+      font-weight: 900;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      color: transparent;
+      background: linear-gradient(90deg, #ffffff, #bababa);
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      animation: rise 2s ease-out forwards;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(200%); opacity: 0; filter: blur(10px); }
+      50% { transform: translateY(0%); opacity: 1; filter: blur(0px); }
+      100% { opacity: 1; }
+    }
+
+    @media (max-width: 480px) {
+      .vrm-text { font-size: 70px; margin-top: 180px; }
+    }
+
+    /* HERO MODEL SECTION */
+    #hero {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+    #canvas { width: 100%; height: 100%; display: block; }
+
+    /* ========================== */
+    /* GROUP INTRO SECTION       */
+    /* ========================== */
+    #intro {
+      text-align: center;
+      padding: 110px 20px;
+    }
+
+    #intro h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    #intro p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.3rem;
+      color: #d6d6d6;
+      line-height: 1.7;
+    }
+
+    /* ========================== */
+    /* OUR COMPANIES SECTION     */
+    /* ========================== */
+    #companies {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    #companies h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 40px;
+    }
+
+    .c-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .c-card {
+      background: #111;
+      border: 1px solid #2a2a2a;
+      padding: 35px;
+      border-radius: 12px;
+      text-align: left;
+      transition: 0.3s ease;
+    }
+
+    .c-card:hover {
+      transform: translateY(-6px);
+      border-color: #fff;
+    }
+
+    .c-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .c-card p {
+      color: #d0d0d0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .c-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .c-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ========================== */
+    /* MISSION SECTION            */
+    /* ========================== */
+    #mission {
+      padding: 100px 20px;
+      background: #080808;
+      text-align: center;
+    }
+
+    #mission h2 {
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+    }
+
+    #mission p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2rem;
+      color: #d3d3d3;
+      line-height: 1.8;
+    }
+
+    /* ========================== */
+    /* FOOTER                     */
+    /* ========================== */
+    footer {
+      padding: 40px;
+      text-align: center;
+      background: #000;
+      color: #777;
+      font-size: 14px;
+      letter-spacing: 1px;
+      border-top: 1px solid #222;
+    }
+    #intro {
+  margin-top: -210px;   /* reduces big gap */
+}
+
+
+  </style>
+</head>
+
+<body>
+<h1 style="position:absolute; left:-9999px;">
+  VRM Group 
+</h1>
+
+  <!-- INTRO TEXT -->
+  <div class="vrm-text">VRM</div>
+
+  <!-- HERO MODEL -->
+  <section id="hero">
+    <canvas id="canvas"></canvas>
+  </section>
+
+  <!-- INTRO -->
+  <section id="intro">
+    <h2>We Are VRM Group</h2>
+    <p style="display:none;">
+VRM Group software solutions, digital innovation, consulting services, technology company India.
+</p>
+
+    <p>
+      A unified group of companies shaping the future through technology, strategy, 
+      digital innovation, and next-generation training.  
+      Built on values, powered by vision.
+     
+    </p>
+  </section>
+  
+  <!-- COMPANIES -->
+  <section id="companies">
+    <h2>Our Companies</h2>
+
+    <div class="c-grid">
+      <div class="c-card">
+        <h3>VRM Digital</h3>
+        <p>Web development, automation, cloud systems, and enterprise software.</p>
+      </div>
+
+      <div class="c-card">
+        <h3>VRM Technologies</h3>
+        <p>IT solutions, backend services, infrastructure engineering.</p>
+      </div>
+
+      <div class="c-card">
+        <h3>VRM Consulting</h3>
+        <p>Business strategy, growth advisory, operational excellence.</p>
+      </div>
+
+      <div class="c-card">
+        <h3>VRM Learning</h3>
+        <p>AI, coding, digital transformation skill development.</p>
+      </div>
+
+      <div class="c-card">
+        <h3>VRM Media</h3>
+        <p>Brand identity, digital marketing, content and creative solutions.</p>
+      </div>
+
+      <div class="c-card">
+        <h3>VRM Ventures</h3>
+        <p>Startup incubation, investments, and new-age business initiatives.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>
+      To empower individuals and organizations through innovation, simplicity, and 
+      technology — creating long-term value for the future.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 VRM Group. All Rights Reserved.
+  </footer>
+
+  <!-- LOADERS -->
+  <script src="three.min.js"></script>
+  <script src="VRMLoader.js"></script>
+  <script src="index.js"></script>
+<script>
+  // Auto-scroll after 2 seconds
+  setTimeout(() => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth"
+    });
+  }, 2000);
+</script>
+
+</body>
+</html>
