@@ -215,6 +215,15 @@
   margin-top: -210px;   /* reduces big gap */
 }
 
+/* ❌ Disable animation on mobile */
+@media (max-width: 768px) {
+  .vrm-text {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
 
   </style>
 </head>
