@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+/* =========================
+   CSS VARIABLES
+========================= */
+:root {
+  --bg: #050505;
+  --fg: #f5f7fb;
+  --muted: #9ca3af;
+  --card: #0d0d0f;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  box-sizing: border-box;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  scroll-behavior: smooth;
+  scroll-behavior: smooth;
+
+}
+
+body {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a,
+button {
+  transition: all 0.2s ease;
+}
+
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* =========================
+   LAYOUT HELPERS
+========================= */
+.content-shell {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* =========================
+   HERO SECTION CENTERED
+========================= */
+
+.hero-section {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.hero-inner {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-tag {
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-primary {
+  padding: 0.9rem 2.2rem;
+  background: white;
+  color: black;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.hero-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 60px rgba(255, 255, 255, 0.2);
+}
+
+.hero-secondary {
+  padding: 0.9rem 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  color: white;
+  transition: all 0.25s ease;
+}
+
+.hero-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+   PILLAR / CARD SYSTEM
+========================= */
+.pillar-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+}
+
+/* Image / art block */
+.pillar-art {
+  height: 240px;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Art styles */
+.art-soft-lime {
+  background: radial-gradient(
+    circle at 30% 20%,
+    #e7f2c5,
+    #c9d9a1 45%,
+    #9fb27a 90%
+  );
+}
+
+.art-rose-sand {
+  background: radial-gradient(
+    circle at 70% 30%,
+    #f3d2e2,
+    #d7b79e 35%,
+    #9e7d5e 95%
+  );
+}
+
+.art-aqua {
+  background: radial-gradient(
+    circle at 40% 20%,
+    #77d1da,
+    #a1dbbd 45%,
+    #d5a4b4 95%
+  );
+}
+
+/* =========================
+   STACKED CARDS (ONE AFTER ANOTHER)
+========================= */
+
+/* This class forces vertical stacking */
+.stack-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+/* Horizontal card layout */
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 1024px) {
+  .cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Row layout */
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Card */
+.pillar-card {
+  background: #0b0b0d;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* Image area */
+.pillar-art {
+  height: 220px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+}
