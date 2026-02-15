@@ -6,6 +6,12 @@ export const metadata = {
   title: "VRM Group",
   description: "Media. Data. Intelligence."
 };
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 
 
 export default function RootLayout({
@@ -20,5 +26,6 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
+    
   );
 }
