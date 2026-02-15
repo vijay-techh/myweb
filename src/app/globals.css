@@ -290,3 +290,41 @@ footer a {
     grid-template-columns: 1fr;
   }
 }
+
+/* Image container */
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.pillar-card {
+  background: #0d0d0f;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* Image container */
+.pillar-art {
+  position: relative;
+  height: 240px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Make image perfectly fit */
+.pillar-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* fills nicely */
+  object-position: center; /* keeps it centered */
+  display: block;
+}
+

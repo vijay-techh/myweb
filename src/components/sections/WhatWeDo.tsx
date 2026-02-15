@@ -1,24 +1,26 @@
 import Link from "next/link";
-
+import Image from "next/image";
 const pillars = [
   {
     title: "VRM MEDIA",
     description: "We cover stories within India and across the world.",
     href: "/media",
-    art: "art-soft-lime",
+    Image:"/assets/images/4.png",
   },
   {
     title: "VRM DATA",
     description: "Let the data say what matters most.",
     href: "/data",
-    art: "art-rose-sand",
+    Image:"/assets/images/5.png",
+
   },
   {
     title: "Intelligence",
     description:
       "We connect signals across systems to form judgment and clarity.",
     href: "/intelligence",
-    art: "art-aqua",
+    Image:"/assets/images/6.png",
+
   },
 ];
 
@@ -40,9 +42,16 @@ export default function WhatWeDo() {
             <Link
               key={pillar.title}
               href={pillar.href}
-              className="pillar-card group flex flex-col transition hover:-translate-y-1 hover:border-white/20"
+              className="pillar-card group flex flex-col transition hover:-translate-y-1 hover:border-white/20 "
             >
-              <div className={`pillar-art ${pillar.art}`} aria-hidden />
+            <div className="pillar-art">
+              <Image
+                src={pillar.Image}
+                alt={pillar.title}
+                fill
+                className="pillar-img"
+              />
+            </div>
 
               <div className="p-7 space-y-4 flex-1 flex flex-col">
                 <h3 className="text-xl font-semibold text-white">
