@@ -1,66 +1,62 @@
+import MediaNavbar from "@/components/layout/MediaNavbar";
+
 export default function MediaPage() {
   return (
-    <main className="py-28">
-      <div className="content-shell max-w-5xl space-y-16">
+    <>
+      <MediaNavbar />
 
-        {/* Header */}
-        <section className="space-y-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-gray-400">
-            VRM Group
-          </p>
+      <main className="py-28">
+        <div className="content-shell max-w-5xl space-y-16">
 
-          <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
-            VRM Media
-          </h1>
-
-          <p className="text-xl text-gray-400 leading-relaxed max-w-3xl">
-            We build narratives that explain reality without simplifying it.
-            Media that prioritizes understanding over attention.
-          </p>
-        </section>
-
-        {/* Philosophy Block */}
-        <section className="grid md:grid-cols-2 gap-12 border-t border-white/10 pt-16">
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">Our Approach</h2>
-            <p className="text-gray-400 leading-relaxed">
-              We slow down the news cycle. We examine systems, incentives,
-              and power structures beneath headlines.
-              No noise. No outrage bait.
+          {/* Header */}
+          <section className="space-y-6">
+            <p className="text-sm uppercase tracking-[0.3em] text-gray-400">
+              VRM Group
             </p>
-          </div>
 
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">What We Cover</h2>
-            <ul className="space-y-3 text-gray-400">
-              <li>• Indian Policy & Governance</li>
-              <li>• Economic Systems</li>
-              <li>• Technology & Power</li>
-              <li>• Institutional Behavior</li>
-            </ul>
-          </div>
-        </section>
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
+              VRM Media
+            </h1>
 
-        {/* Articles Placeholder */}
-        <section className="border-t border-white/10 pt-16">
-          <h2 className="text-2xl font-semibold mb-8">
-            Latest Analysis
-          </h2>
+            <p className="text-xl text-gray-400 leading-relaxed max-w-3xl">
+              We build narratives that explain reality without simplifying it.
+              Media that prioritizes understanding over attention.
+            </p>
+          </section>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            <ArticleCard 
-              title="Why GDP Growth Can Mislead"
-              excerpt="Understanding structural growth vs nominal expansion."
-            />
-            <ArticleCard 
-              title="India's Policy Cycles"
-              excerpt="How electoral timing shapes economic decisions."
-            />
-          </div>
-        </section>
+          {/* Philosophy Block */}
+          <section className="grid md:grid-cols-2 gap-12 border-t border-white/10 pt-16">
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">Our Approach</h2>
+              <p className="text-gray-400 leading-relaxed">
+                We slow down the news cycle. We examine systems, incentives,
+                and power structures beneath headlines.
+                No noise. No outrage bait.
+              </p>
+            </div>
+          </section>
 
-      </div>
-    </main>
+          {/* Articles */}
+          <section className="border-t border-white/10 pt-16">
+            <h2 className="text-2xl font-semibold mb-8">
+              Latest Analysis
+            </h2>
+
+            <div className="grid gap-8 md:grid-cols-2">
+              <ArticleCard 
+                title="Why GDP Growth Can Mislead"
+                excerpt="Understanding structural growth vs nominal expansion."
+              />
+              <ArticleCard 
+                title="India's Policy Cycles"
+                excerpt="How electoral timing shapes economic decisions."
+              />
+            </div>
+          </section>
+
+        </div>
+      </main>
+    </>
   );
 }
 
